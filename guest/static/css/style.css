@@ -1,0 +1,169 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+#site {
+    overflow: hidden;
+}
+
+.content {
+    width: 100%;
+    height: 650%;
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    height: 17%;
+    background: black;
+}
+
+.h_header {
+    width: 100%;
+    height: 25%;
+    background-color: rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+.link {
+    padding-top: 2%;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 150%;
+    float: right;
+    margin-right: 5%;
+    transition: 1s;
+}
+
+.link:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.h_content {
+    width: 100%;
+    height: 65%;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.login {
+    width: 40%;
+    height: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    display: none;
+    position: absolute;
+    margin-left: 10%;
+    min-width: 500px;
+}
+
+
+
+.h_footer {
+    width: 100%;
+    height: 10%;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.count {
+    width: 100%;
+    height: 17%;
+}
+
+.c1 {
+    width: 100%;
+    height: 20%;
+    background-color: rgba(255, 153, 153, 0.5);
+}
+
+.timery {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.break1 {
+    width: 35%;
+    height: 100%;
+    float: left;
+}
+
+.break2 {
+    width: 65%;
+    height: 25%;
+    float: left;
+}
+
+.clock {
+    width: 65%;
+    height: 50%;
+    float: left;
+}
+
+.column {
+    float: left;
+    margin-left: 5%;
+}
+
+.timer {
+    font-size: 1000%;
+    text-align: center;
+    color: antiquewhite;
+}
+
+.text {
+    font-size: 100%;
+    text-align: center;
+    color: antiquewhite;
+}
+
+.map {
+    width: 100%;
+    height: 17%;
+}
+
+.wi {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.m1 {
+    width: 100%;
+    height: 10%;
+}
+
+.m2 {
+    margin-left: 10%;
+    float: left;
+}
+
+.m3 {
+    width: 30%;
+    height: 80%;
+    margin-left: 5%;
+    float: left;
+    font-size: 300%;
+    color: rgb(255, 191, 128);
+}
+
+.carousely {
+    width: 100%;
+    height: 15%;
+}
+
+.invite {
+    width: 100%;
+    height: 15%;
+}
+
+.gallery {
+    width: 100%;
+    height: 15%;
+}
+
+.footer {
+    width: 100%;
+    height: auto;
+}
