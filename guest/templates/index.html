@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
@@ -36,32 +37,81 @@
                 background-size: cover;
                 filter: blur(0.3px);
             }
+            .bg3 {
+                background-image: url({% static 'pics/bg4.jpg' %});
+                height: 100%; 
+                background-attachment: fixed;
+                background-position: left center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                filter: blur(0.3px);
+            }
+            
+    @media only screen and (max-width: 1000px) {
+                
+                .bg1 {
+                background-image: url({% static 'pics/bg1.jpg' %});
+                height: 100%; 
+                background-attachment: fixed;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                filter: blur(0.3px);
+            }
+            .c2 {
+                background-image: url({% static 'pics/bg2.jpg' %});
+                height: 60%; 
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                filter: blur(0.3px);
+            }
+            .bg2 {
+                background-image: url({% static 'pics/bg3.jpg' %});
+                height: 100%; 
+                background-attachment: fixed;
+                background-position: left center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                filter: blur(0.3px);
+            }
+            .bg3 {
+                background-image: url({% static 'pics/bg4.jpg' %});
+                height: 100%; 
+                background-attachment: fixed;
+                background-position: left center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                filter: blur(0.3px);
+            }
+            }
         </style>
     </head>
     <body>
         <div class="content">
+            <div class="h_header" id="h_header" style="height: 15%; position: fixed; display: none; z-index: 999;">
+                <div class="link">
+                    Галерея
+                </div>
+                <div class="link">
+                    Приглашение
+                </div>
+                <div class="link">
+                    Фото
+                </div>
+                <div class="link">
+                    Место
+                </div>
+                <div class="link">
+                    Время
+                </div>
+                <div class="link" id="main">
+                    Главная
+                </div>  
+            </div>
             <div class="header">
                 <div class="bg1">
-                    <div class="h_header" id="h_header" style="height: 15%; position: fixed; display: none; z-index: 999;">
-                            <div class="link">
-                                Галерея
-                            </div>
-                            <div class="link">
-                                Приглашение
-                            </div>
-                            <div class="link">
-                                Фото
-                            </div>
-                            <div class="link">
-                                Место
-                            </div>
-                            <div class="link">
-                                Время
-                            </div>
-                            <div class="link">
-                                Главная
-                            </div>  
-                    </div>
                     <div class="h_header">
                             <h1 style="font-size: 500%;
                                        color: rgba(255, 255, 255, 0.9);
@@ -74,9 +124,14 @@
                     </div>
                     <div class="h_content">
                             <div class="login" id="login">
+                                Логин <input type="text" id="name">
+                                Пароль <input type="password" id="password">
                                 <button onclick="login()" >
                                     Войти 
-                                </button>                                
+                                </button>   
+                                <button onclick="get_beer()" >
+                                    Get some beer 
+                                </button> 
                             </div>
                     </div>
                     <div class="h_footer">
@@ -128,6 +183,7 @@
                 </div>
             </div>
             <div class="carousely">
+                <div class="car1"></div>
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                         <!-- Indicators -->
                     <ol class="carousel-indicators">
@@ -161,8 +217,30 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
+                <div class="car1"></div>
             </div>
             <div class="invite">
+                <div class="bg3">
+                    <div class="inv">
+                    <div class="i1">
+                    </div>
+                    <div class="i2">
+                        <center>
+                            <h1 id="dear">
+                                Уважаемый Толеген
+                            </h1>
+                        </center>
+                        <br><br>
+                        <center><h3>Приглашаем Вас на свадьбу Толегена и Гульмиры.</h3></center>
+                        <br><br><br><br>
+                        <center>
+                            <button class="ido" id="ido" onclick="ido()">Я приду</button>
+                        </center>
+                    </div>
+                    <div class="i1">
+                    </div>
+                </div>
+                </div>    
             </div>
             <div class="gallery">
             </div>

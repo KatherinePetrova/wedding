@@ -39,7 +39,7 @@ html, body {
 
 .link:hover {
     cursor: pointer;
-    color: white;
+    color: pink;
 }
 
 .h_content {
@@ -150,12 +150,62 @@ html, body {
 
 .carousely {
     width: 100%;
-    height: 15%;
+    height: 17%;
+}
+
+#myCarousel {
+    margin-left: 5%;
+    width: 60%;
+}
+
+.car1 {
+    height: 10%;
+    width: 100%;
 }
 
 .invite {
     width: 100%;
+    height: 17%;
+}
+
+.inv {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.i1 {
+    width: 100%;
     height: 15%;
+}
+
+.i2 {
+    width: 60%;
+    height: 70%;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: white;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    font-family: 'Bad Script', cursive;
+}
+
+.ido {
+    width: 30%;
+    height: 10%;
+    border-radius: 50px 50px 50px 50px;
+    font-size: 150%;
+    border-style: hidden;
+    background-color: pink;
+    color: white;
+    transition: 1s;
+    border-color: antiquewhite;
+}
+
+.ido:hover {
+    border-style: solid;
 }
 
 .gallery {
@@ -166,4 +216,227 @@ html, body {
 .footer {
     width: 100%;
     height: auto;
+}
+
+@media only screen and (max-width: 1000px) {
+    
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+#site {
+    overflow: hidden;
+}
+
+.content {
+    width: 100%;
+    height: 650%;
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    height: 17%;
+    background: black;
+}
+
+.h_header {
+    width: 100%;
+    height: 25%;
+    background-color: rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+.link {
+    padding-top: 2%;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 150%;
+    float: left;
+    margin-left: 5%;
+}
+
+.link:hover {
+    cursor: pointer;
+    color: pink;
+}
+
+#main {
+    display: none;
+}
+
+.h_content {
+    width: 100%;
+    height: 65%;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.login {
+    width: 40%;
+    height: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    display: none;
+    position: absolute;
+    margin-left: 10%;
+    min-width: 500px;
+}
+
+
+
+.h_footer {
+    width: 100%;
+    height: 10%;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.count {
+    width: 100%;
+    height: 17%;
+}
+
+.c1 {
+    width: 100%;
+    height: 20%;
+    background-color: rgba(255, 153, 153, 0.5);
+}
+
+.timery {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.break1 {
+    width: 35%;
+    height: 100%;
+    float: left;
+}
+
+.break2 {
+    display: none;
+}
+
+.clock {
+    width: 100%;
+    height: 50%;
+}
+
+.column {
+    float: left;
+    margin-left: 5%;
+}
+
+.timer {
+    font-size: 1000%;
+    text-align: center;
+    color: antiquewhite;
+}
+
+.text {
+    font-size: 100%;
+    text-align: center;
+    color: antiquewhite;
+}
+
+.map {
+    width: 100%;
+    height: 17%;
+}
+
+.wi {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.m1 {
+    width: 100%;
+    height: 10%;
+}
+
+.m2 {
+    margin-left: 10%;
+    float: left;
+}
+
+.m3 {
+    width: 30%;
+    height: 80%;
+    margin-left: 5%;
+    float: left;
+    font-size: 300%;
+    color: rgb(255, 191, 128);
+}
+
+.carousely {
+    width: 100%;
+    height: 17%;
+}
+
+#myCarousel {
+    margin-left: 5%;
+    width: 60%;
+}
+
+.car1 {
+    height: 10%;
+    width: 100%;
+}
+
+.invite {
+    width: 100%;
+    height: 17%;
+}
+
+.inv {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.i1 {
+    width: 100%;
+    height: 15%;
+}
+
+.i2 {
+    width: 60%;
+    height: 70%;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: white;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    font-family: 'Bad Script', cursive;
+}
+
+.ido {
+    width: 30%;
+    height: 10%;
+    border-radius: 50px 50px 50px 50px;
+    font-size: 150%;
+    border-style: hidden;
+    background-color: pink;
+    color: white;
+    transition: 1s;
+    border-color: antiquewhite;
+}
+
+.ido:hover {
+    border-style: solid;
+}
+
+.gallery {
+    width: 100%;
+    height: 15%;
+}
+
+.footer {
+    width: 100%;
+    height: auto;
+}
 }

@@ -14,7 +14,7 @@ class Guest(models.Model):
         return self.user.last_name
     
     def email(self):
-        return sekf.user.email
+        return self.user.email
     
     def __str__(self):
         return self.user.first_name + " " + self.user.last_name
@@ -26,4 +26,11 @@ def create_user_asGuest(sender, instance, created, **kwargs):
 
 @receiver(post_save, sender=User)
 def save_user_asGuest(sender, instance, **kwargs):
-    instance.profile.save()
+    instance.guest.save()
+    
+
+class Beer(models.Model):
+    name = models.CharField(max_length=1000,default="heineken")
+    
+    def __str__(self):
+        return self.name
