@@ -12,14 +12,14 @@ def index(request):
 @api_view(['GET'])
 def guestInf(request):
     user = request.user
-    guest = Guest.objects.filter(user=user)[0]
+    guest = Guest.objects.filter(user=user)
     seri = GuestSerializer(guest, many=True)
     return Response(seri.data)
 
 @api_view(['GET'])
 def getInvite(request):
     user = request.user
-    guest = Guest.objects.filter(user=user).values()[0]
+    guest = Guest.objects.filter(user=user)
     guest.invite = True
     guest.save()
     seri = GuestSerializer(guest, many=True)

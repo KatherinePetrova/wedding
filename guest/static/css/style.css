@@ -197,15 +197,14 @@ html, body {
     height: 10%;
     border-radius: 50px 50px 50px 50px;
     font-size: 150%;
-    border-style: hidden;
     background-color: pink;
     color: white;
     transition: 1s;
-    border-color: antiquewhite;
+    vertical-align: middle;
 }
 
 .ido:hover {
-    border-style: solid;
+    cursor: pointer;
 }
 
 .gallery {

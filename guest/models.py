@@ -6,6 +6,7 @@ from django.dispatch import receiver
 class Guest(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     invite = models.BooleanField(default=False)
+    gender = models.BooleanField(default=False)
     
     def first_name(self):
         return self.user.first_name

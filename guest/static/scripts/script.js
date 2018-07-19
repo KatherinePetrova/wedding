@@ -59,13 +59,20 @@ async function getInf(){
                 let text = await response.text();
                 let data = JSON.parse(text);
                 console.log("data", data);
-                document.getElementById("dear").innerHTML = "Уважаемый" + data.first_name;
+                if(data[0].gender){
+                    document.getElementById("dear").innerHTML = "Уважаемая " + data[0].first_name;
+                } else {
+                    document.getElementById("dear").innerHTML = "Уважаемый " + data[0].first_name;
+                }
             }
 }
 
 function ido(){
     console.log("ido");
-    $("#ido").animate({backgroundColor: "white", color: "black"}, 1500);
+    var a = document.getElementById("ido");
+    a.setAttribute("onclick", "");
+    a.style.backgroundColor = "white";
+    a.style.color = "black";
 }
 
 window.onload = lo;
