@@ -1,11 +1,10 @@
 html, body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
 }
 
 #site {
-    overflow-y: hidden;
+    
 }
 
 .content {
@@ -13,6 +12,24 @@ html, body {
     height: 710%;
     padding: 0;
     margin: 0;
+}
+
+.navigate {
+    height: 100%;
+    width: 20%;
+    z-index: 999;
+    position: fixed;
+    right: 0;   
+}
+
+.n_butt {
+    height: 20%;
+    width: 100%;
+}
+
+.n_gap {
+    height: 60%;
+    width: 100%;
 }
 
 .fixed_menu {
@@ -39,7 +56,6 @@ html, body {
 .fixed_header {
     width: 0%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.2);
     position: fixed;
     z-index: 999;
 }
@@ -74,14 +90,12 @@ html, body {
     width: 80%;
     max-width: auto;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
     float: left;
 }
 
 .header {
     width: 100%;
     height: 15.3%;
-    background: black;
 }
 
 .bg1_gap {
@@ -131,33 +145,47 @@ html, body {
     font-size: 125%;
 }
 
+.welcome {
+    margin-top: 5%;
+    margin-left: 10%;
+    height: 30%;
+    width: 60%;
+    font-family: 'Andantino script', arial;
+    font-size: 400%;
+    font-style: italic;
+    display: none;
+}
+
+.w1 {
+    width: 100%;
+    height: 50%;
+    vertical-align: middle;
+}
+
+.w2 {
+    width: 60%;
+    height: 50%;
+    margin-left: 40%;
+    vertical-align: middle;
+}
+
 .count {
     width: 100%;
     height: 15.3%;
 }
 
-.c1 {
-    width: 100%;
-    height: 20%;
-    background-color: rgba(255, 153, 153, 0.5);
-}
-
-.timery {
+.c_cover {
     width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.3);
 }
 
-.break1 {
-    width: 35%;
-    height: 100%;
-    float: left;
-}
-
-.break2 {
-    width: 65%;
-    height: 25%;
-    float: left;
+.c_header {
+    width: 100%;
+    height: 20%;
+    vertical-align: middle;
+    font-size: 400%;
+    
 }
 
 .clock {

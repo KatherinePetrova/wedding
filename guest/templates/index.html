@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
+        <link href="http://allfont.ru/allfont.css?fonts=andantino-script" rel="stylesheet" type="text/css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
@@ -12,6 +13,16 @@
         <style>
             .bg1 {
                 background-image: url({% static 'pics/bg5.jpg' %});
+                height: 100%; 
+                background-attachment: fixed;
+                background-position: left center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                filter: blur(0.3px);
+            }
+            
+            .bg2 {
+                background-image: url({% static 'pics/flowers_bg.jpg' %});
                 height: 100%; 
                 background-attachment: fixed;
                 background-position: left center;
@@ -29,15 +40,7 @@
                 background-size: cover;
                 filter: blur(0.3px);
             }
-            .bg2 {
-                background-image: url({% static 'pics/bg3.jpg' %});
-                height: 100%; 
-                background-attachment: fixed;
-                background-position: left center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                filter: blur(0.3px);
-            }
+            
             .bg3 {
                 background-image: url({% static 'pics/bg4.jpg' %});
                 height: 100%; 
@@ -62,11 +65,11 @@
             <div class="fixed_header" id="fh">
                 <div class="left_bar">
                     <div class="lf_gap1"></div>
-                    <div class="link">
+                    <div class="link" onclick="scrollButt('#1')">
                         Главная
                     </div>
-                    <div class="link">
-                        Главная
+                    <div class="link" onclick="scrollButt('#2')">
+                        Agenda
                     </div>
                     <div class="link">
                         Главная
@@ -78,7 +81,7 @@
                 <div class="right_bar" onclick="close()">
                 </div>
             </div>
-            <div class="header">
+            <div class="header" id="1">
                 <div class="bg1">
                     <center><img src="{% static 'pics/logo2.png' %}" height="20%" id="logo1"></center>
                     <div class="bg1_gap"></div>
@@ -99,40 +102,28 @@
                         <div class="l_fields_left">
                             <input type="password" id="password">
                         </div>
-                        <center><button class="l_button" onclick="login()">Войти</button></center>
+                        <center><button class="l_button" onclick="login()">Кіру</button></center>
+                    </div>
+                    <div class="welcome" id="welcome">
+                        <div class="w1">
+                            Қош келдің
+                        </div>
+                        <div class="w2" id="w2">
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="count">
-                <div class="c1">
-                </div>
-                <div class="c2">
-                    <div class="timery">
-                        <div class="break1"></div>
-                        <div class="break2"></div>
-                        <div class="clock">
-                            <div class="column">
-                                <div class="timer" id="days"></div>
-                                <div class="text">ДНЕЙ</div>
-                            </div>
-                            <div class="column">
-                                <div class="timer" id="hours"></div>
-                                <div class="text">ЧАСОВ</div>
-                            </div>
-                            <div class="column">
-                                <div class="timer" id="minutes"></div>
-                                <div class="text">МИНУТ</div>
-                            </div>
-                            <div class="column">
-                                <div class="timer" id="seconds"></div>
-                                <div class="text">СЕКУНД</div>
-                            </div>
+            <div class="count" id="2">
+                <div class="bg2">
+                    <div class="c_cover">
+                        <div class="c_header">
                         </div>
-                        <div class="break2"></div>
+                        <div class="timery">
+                        </div>
+                        <div class="c_footer">
+                        </div>
                     </div>
-                </div>
-                <div class="c1">
-                </div>
+                </div>                        
             </div>
             <div class="map">
                 <div class="bg2">

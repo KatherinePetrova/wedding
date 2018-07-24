@@ -1,9 +1,15 @@
 function lo(){
-    document.body.scrollTop = 0;
+    $('body,html').animate({scrollTop: $("#1").offset().top}, 500);
+    document.getElementById("site").style.overflowY = "hidden";
 }
 
 function logout() {
     localStorage.setItem("token","sddsds");
+}
+
+function scrollButt(a){
+    $('body,html').animate({scrollTop: $(a).offset().top}, 500);
+    close();
 }
 
 var menuToggle = true;
@@ -74,6 +80,8 @@ async function getInf(){
                 let text = await response.text();
                 let data = JSON.parse(text);
                 console.log("data", data);
+                document.getElementById("w2").innerHTML = data[0].first_name;
+                $("#welcome").fadeIn(500);
                 if(data[0].gender){
                     document.getElementById("dear").innerHTML = "Уважаемая " + data[0].first_name;
                 } else {
