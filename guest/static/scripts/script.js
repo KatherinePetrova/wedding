@@ -80,12 +80,12 @@ async function getInf(){
                 let text = await response.text();
                 let data = JSON.parse(text);
                 console.log("data", data);
-                document.getElementById("w2").innerHTML = data[0].first_name;
+                document.getElementById("w1").innerHTML = "Қош келдіңіз " + data[0].first_name;
                 $("#welcome").fadeIn(500);
                 if(data[0].gender){
-                    document.getElementById("dear").innerHTML = "Уважаемая " + data[0].first_name;
+                    document.getElementById("dear").innerHTML = "Құрметті " + data[0].first_name;
                 } else {
-                    document.getElementById("dear").innerHTML = "Уважаемый " + data[0].first_name;
+                    document.getElementById("dear").innerHTML = "Құрметті " + data[0].first_name;
                 }
             }
 }
