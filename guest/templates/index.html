@@ -11,7 +11,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <style>
             .bg1 {
-                background-image: url({% static 'pics/bg1.jpg' %});
+                background-image: url({% static 'pics/bg5.jpg' %});
                 height: 100%; 
                 background-attachment: fixed;
                 background-position: left center;
@@ -19,6 +19,7 @@
                 background-size: cover;
                 filter: blur(0.3px);
             }
+            
             .c2 {
                 background-image: url({% static 'pics/bg2.jpg' %});
                 height: 60%; 
@@ -48,93 +49,57 @@
             }
             
     @media only screen and (max-width: 1000px) {
-                
-                .bg1 {
-                background-image: url({% static 'pics/bg1.jpg' %});
-                height: 100%; 
-                background-attachment: fixed;
-                background-position: center center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                filter: blur(0.3px);
-            }
-            .c2 {
-                background-image: url({% static 'pics/bg2.jpg' %});
-                height: 60%; 
-                background-attachment: fixed;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                filter: blur(0.3px);
-            }
-            .bg2 {
-                background-image: url({% static 'pics/bg3.jpg' %});
-                height: 100%; 
-                background-attachment: fixed;
-                background-position: left center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                filter: blur(0.3px);
-            }
-            .bg3 {
-                background-image: url({% static 'pics/bg4.jpg' %});
-                height: 100%; 
-                background-attachment: fixed;
-                background-position: left center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                filter: blur(0.3px);
-            }
             }
         </style>
     </head>
-    <body>
+    <body onload="lo()">
         <div class="content">
-            <div class="h_header" id="h_header" style="height: 15%; position: fixed; display: none; z-index: 999;">
-                <div class="link">
-                    Галерея
+            <div class="fixed_menu">
+                <div class="fm_gap"></div>
+                <img src="{% static 'pics/menu_icon.png' %}" height="40%" id="main_icon" onclick="menu()">
+                <div class="fm_gap"></div>
+            </div>
+            <div class="fixed_header" id="fh">
+                <div class="left_bar">
+                    <div class="lf_gap1"></div>
+                    <div class="link">
+                        Главная
+                    </div>
+                    <div class="link">
+                        Главная
+                    </div>
+                    <div class="link">
+                        Главная
+                    </div>
+                    <div class="link">
+                        Главная
+                    </div>
                 </div>
-                <div class="link">
-                    Приглашение
+                <div class="right_bar" onclick="close()">
                 </div>
-                <div class="link">
-                    Фото
-                </div>
-                <div class="link">
-                    Место
-                </div>
-                <div class="link">
-                    Время
-                </div>
-                <div class="link" id="main">
-                    Главная
-                </div>  
             </div>
             <div class="header">
                 <div class="bg1">
-                    <div class="h_header">
-                            <h1 style="font-size: 500%;
-                                       color: rgba(255, 255, 255, 0.9);
-                                       display: none;
-                                       position: absolute;
-                                       margin-left: 10%;"
-                                id="welcome">
-                                Гульбану + Толеген
-                            </h1>
-                    </div>
-                    <div class="h_content">
-                            <div class="login" id="login">
-                                Логин <input type="text" id="name">
-                                Пароль <input type="password" id="password">
-                                <button onclick="login()" >
-                                    Войти 
-                                </button>   
-                                <button onclick="get_beer()" >
-                                    Get some beer 
-                                </button> 
-                            </div>
-                    </div>
-                    <div class="h_footer">
+                    <center><img src="{% static 'pics/logo2.png' %}" height="20%" id="logo1"></center>
+                    <div class="bg1_gap"></div>
+                    <div class="login" id="login">
+                        <div class="l_gap"></div>
+                        <div class="l_main_text">
+                            Авторизация
+                        </div>
+                        <div class="l_fields_right">
+                            Логин:
+                        </div>
+                        <div class="l_fields_left">
+                            <input type="text" id="name">
+                        </div>
+                        <div class="l_fields_right">
+                            Пароль:
+                        </div>
+                        <div class="l_fields_left">
+                            <input type="password" id="password">
+                        </div>
+                        <center><button class="l_button" onclick="login()">Войти</button></center>
                     </div>
                 </div>
             </div>

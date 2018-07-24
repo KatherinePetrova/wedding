@@ -5,70 +5,135 @@ html, body {
 }
 
 #site {
-    overflow: hidden;
+    overflow-y: hidden;
 }
 
 .content {
     width: 100%;
-    height: 650%;
+    height: 710%;
     padding: 0;
     margin: 0;
 }
 
-.header {
-    width: 100%;
-    height: 17%;
-    background: black;
+.fixed_menu {
+    width: 50%;
+    padding-left: 5%;
+    height: 20%;
+    position: fixed;
+    z-index: 1000;
 }
 
-.h_header {
+.fm_gap {
     width: 100%;
-    height: 25%;
+    height: 30%;
+}
+
+#main_icon {
+    display: none;
+}
+
+#main_icon:hover {
+    cursor: pointer;
+}
+
+.fixed_header {
+    width: 0%;
+    height: 100%;
     background-color: rgba(255, 255, 255, 0.2);
-    text-align: center;
+    position: fixed;
+    z-index: 999;
+}
+
+.left_bar {
+    width: 20%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    float: left;
+}
+
+.lf_gap1 {
+    width: 100%;
+    height: 20%;
 }
 
 .link {
-    padding-top: 2%;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 150%;
-    float: right;
-    margin-right: 5%;
-    transition: 1s;
+    width: 100%;
+    height: 10%;
+    vertical-align: middle;
+    padding-left: 10%;
+    font-size: 175%;
+    display: none;
 }
 
 .link:hover {
     cursor: pointer;
-    color: pink;
+    background-color: white;
 }
 
-.h_content {
+.right_bar {
+    width: 80%;
+    max-width: auto;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    float: left;
+}
+
+.header {
     width: 100%;
-    height: 65%;
-    background-color: rgba(255, 255, 255, 0.2);
+    height: 15.3%;
+    background: black;
+}
+
+.bg1_gap {
+    height: 5%;
+    width: 100%;
 }
 
 .login {
-    width: 40%;
+    margin-left: 5%;
     height: 50%;
-    background-color: rgba(255, 255, 255, 0.4);
-    display: none;
-    position: absolute;
-    margin-left: 10%;
-    min-width: 500px;
+    width: 40%;
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
-
-
-.h_footer {
+.l_gap {
+    height: 5%;
     width: 100%;
-    height: 10%;
-    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.l_main_text {
+    width: 100%;
+    height: 20%;
+    font-size: 200%;
+    text-align: center;
+}
+
+.l_fields_right {
+    width: 30%;
+    padding-left: 15%;
+    height: 20%;
+    font-size: 150%;
+    float: left;
+}
+
+.l_fields_left {
+    width 30%;
+    height: 20%;
+    padding-left: 5%;
+    padding-right: 15%;
+    font-size: 150%;
+    float: left;
+}
+
+.l_button {
+    height: 15%;
+    width: 25%;
+    font-size: 125%;
 }
 
 .count {
     width: 100%;
-    height: 17%;
+    height: 15.3%;
 }
 
 .c1 {
@@ -120,7 +185,7 @@ html, body {
 
 .map {
     width: 100%;
-    height: 17%;
+    height: 15.3%;
 }
 
 .wi {
@@ -150,7 +215,7 @@ html, body {
 
 .carousely {
     width: 100%;
-    height: 17%;
+    height: 15.3%;
 }
 
 #myCarousel {
@@ -165,7 +230,7 @@ html, body {
 
 .invite {
     width: 100%;
-    height: 17%;
+    height: 15.3%;
 }
 
 .inv {
@@ -209,233 +274,10 @@ html, body {
 
 .gallery {
     width: 100%;
-    height: 15%;
+    height: 15.3%;
 }
 
 .footer {
     width: 100%;
     height: auto;
-}
-
-@media only screen and (max-width: 1000px) {
-    
-html, body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
-
-#site {
-    overflow: hidden;
-}
-
-.content {
-    width: 100%;
-    height: 650%;
-    padding: 0;
-    margin: 0;
-}
-
-.header {
-    width: 100%;
-    height: 17%;
-    background: black;
-}
-
-.h_header {
-    width: 100%;
-    height: 25%;
-    background-color: rgba(255, 255, 255, 0.2);
-    text-align: center;
-}
-
-.link {
-    padding-top: 2%;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 150%;
-    float: left;
-    margin-left: 5%;
-}
-
-.link:hover {
-    cursor: pointer;
-    color: pink;
-}
-
-#main {
-    display: none;
-}
-
-.h_content {
-    width: 100%;
-    height: 65%;
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.login {
-    width: 40%;
-    height: 50%;
-    background-color: rgba(255, 255, 255, 0.4);
-    display: none;
-    position: absolute;
-    margin-left: 10%;
-    min-width: 500px;
-}
-
-
-
-.h_footer {
-    width: 100%;
-    height: 10%;
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.count {
-    width: 100%;
-    height: 17%;
-}
-
-.c1 {
-    width: 100%;
-    height: 20%;
-    background-color: rgba(255, 153, 153, 0.5);
-}
-
-.timery {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.3);
-}
-
-.break1 {
-    width: 35%;
-    height: 100%;
-    float: left;
-}
-
-.break2 {
-    display: none;
-}
-
-.clock {
-    width: 100%;
-    height: 50%;
-}
-
-.column {
-    float: left;
-    margin-left: 5%;
-}
-
-.timer {
-    font-size: 1000%;
-    text-align: center;
-    color: antiquewhite;
-}
-
-.text {
-    font-size: 100%;
-    text-align: center;
-    color: antiquewhite;
-}
-
-.map {
-    width: 100%;
-    height: 17%;
-}
-
-.wi {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.3);
-}
-
-.m1 {
-    width: 100%;
-    height: 10%;
-}
-
-.m2 {
-    margin-left: 10%;
-    float: left;
-}
-
-.m3 {
-    width: 30%;
-    height: 80%;
-    margin-left: 5%;
-    float: left;
-    font-size: 300%;
-    color: rgb(255, 191, 128);
-}
-
-.carousely {
-    width: 100%;
-    height: 17%;
-}
-
-#myCarousel {
-    margin-left: 5%;
-    width: 60%;
-}
-
-.car1 {
-    height: 10%;
-    width: 100%;
-}
-
-.invite {
-    width: 100%;
-    height: 17%;
-}
-
-.inv {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.6);
-}
-
-.i1 {
-    width: 100%;
-    height: 15%;
-}
-
-.i2 {
-    width: 60%;
-    height: 70%;
-    margin-left: 20%;
-    margin-right: 20%;
-    background-color: white;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    font-family: 'Bad Script', cursive;
-}
-
-.ido {
-    width: 30%;
-    height: 10%;
-    border-radius: 50px 50px 50px 50px;
-    font-size: 150%;
-    border-style: hidden;
-    background-color: pink;
-    color: white;
-    transition: 1s;
-    border-color: antiquewhite;
-}
-
-.ido:hover {
-    border-style: solid;
-}
-
-.gallery {
-    width: 100%;
-    height: 15%;
-}
-
-.footer {
-    width: 100%;
-    height: auto;
-}
 }
