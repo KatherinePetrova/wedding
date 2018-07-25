@@ -51,6 +51,18 @@
                 filter: blur(0.3px);
             }
             
+            .bg4 {
+                background-image: url({% static 'pics/bg7.jpg' %});
+                height: 100%; 
+                background-attachment: fixed;
+                background-position: left center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                filter: blur(0.3px);
+            }
+            
+            <
+            
     @media only screen and (max-width: 1000px) {
             }
         </style>
@@ -162,55 +174,46 @@
                 </div>
             </div>
             <div class="carousely" id="4">
-                <div class="car1"></div>
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                        <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                        <li data-target="#myCarousel" data-slide-to="2"></li>
-                        <li data-target="#myCarousel" data-slide-to="3"></li>
-                        <li data-target="#myCarousel" data-slide-to="4"></li>
-                        <li data-target="#myCarousel" data-slide-to="5"></li>
-                        <li data-target="#myCarousel" data-slide-to="6"></li>
-                    </ol>
+                <div class="bg4">
+                    <div class="c_cover">
+                        <div class="gal">
+                            <div class="strelki">
+                                <div class="vlevo" onclick="sl()">
+                                </div>
+                                <div class="vpravo" onclick="sr()">
+                                </div>
+                            </div>
+                            <div class="g_gap"></div>
+                            <div class="karts" id="karts">
+                                <div class="kartochka">
 
-                        <!-- Wrapper for slides -->
-                    <div class="carousel-inner">
-                        <div class="item active">
-                            <img src="{% static 'pics/car1.jpg' %}" width="100%" alt="Los Angeles">
+                                </div>
+                                <div class="kartochka">
+                                    <img src="{% static 'pics/car1.jpg' %}" height="100%" id="c1">
+                                </div>
+                                <div class="kartochka">
+                                    <img src="{% static 'pics/car2.jpg' %}" height="100%" id="c2">
+                                </div>
+                                <div class="kartochka">
+                                    <img src="{% static 'pics/car3.jpg' %}" height="100%" id="c3">
+                                </div>
+                                <div class="kartochka">
+                                    <img src="{% static 'pics/car4.jpg' %}" height="100%" id="c4">
+                                </div>
+                                <div class="kartochka">
+                                    <img src="{% static 'pics/car5.jpg' %}" height="100%" id="c5">
+                                </div>
+                                <div class="kartochka">
+                                    <img src="{% static 'pics/car6.jpg' %}" height="100%" id="c6">
+                                </div>
+                                <div class="kartochka">
+                                    <img src="{% static 'pics/car7.jpg' %}" height="100%" id="c7">
+                                </div>                            
+                            </div>
+                            <div class="g_gap"></div>
                         </div>
-                        <div class="item">
-                            <img src="{% static 'pics/car2.jpg' %}" width="100%" alt="Chicago">
-                        </div>
-                        <div class="item">
-                            <img src="{% static 'pics/car3.jpg' %}" width="100%" alt="New York">
-                        </div>
-                        <div class="item">
-                            <img src="{% static 'pics/car4.jpg' %}" width="100%" alt="Chicago">
-                        </div>
-                        <div class="item">
-                            <img src="{% static 'pics/car5.jpg' %}" width="100%" alt="New York">
-                        </div>
-                        <div class="item">
-                            <img src="{% static 'pics/car6.jpg' %}" width="100%" alt="Chicago">
-                        </div>
-                        <div class="item">
-                            <img src="{% static 'pics/car7.jpg' %}" width="100%" alt="New York">
-                        </div>
-                    </div>
-
-                        <!-- Left and right controls -->
-                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+                    </div>                
                 </div>
-                <div class="car1"></div>
             </div>
             <div class="invite" id="5">
                 <div class="bg3">

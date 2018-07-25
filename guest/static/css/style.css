@@ -4,12 +4,11 @@ html, body {
 }
 
 #site {
-    
+    overflow-y: hidden;
 }
 
 .content {
     width: 100%;
-    height: 400%;
     padding: 0;
     margin: 0;
 }
@@ -95,7 +94,7 @@ html, body {
 
 .header {
     width: 100%;
-    height: 25%;
+    height: 100vh;
 }
 
 .bg1_gap {
@@ -151,8 +150,9 @@ html, body {
     height: 30%;
     width: 60%;
     font-family: 'Cormorant Infant', serif;
-    font-size: 400%;
+    font-size: 500%;
     display: none;
+    position: absolute;
 }
 
 .w1 {
@@ -170,7 +170,7 @@ html, body {
 
 .count {
     width: 100%;
-    height: 25%;
+    height: 100vh;
 }
 
 .c_cover {
@@ -235,18 +235,72 @@ html, body {
 
 .map {
     width: 100%;
-    height: 25%;
+    height: 100vh;
 }
 
 .carousely {
     width: 100%;
-    height: 25%;
+    height: 100vh;
 }
 
-#myCarousel {
+.gal {
+    width: 100%;
+    height: 100%;
+}
+
+.g_gap {
+    width: 100%;
+    height: 5%;
+}
+
+.karts {
+    width 100%;
+    height: 90%;
+    overflow-x: hidden;
+    display: flex;
+}
+.kartochka {
     margin-left: 5%;
-    width: 60%;
-    height: 80%;
+    height: 100%;
+    float: left;
+    display: inline-block;
+    -webkit-box-shadow: 4px 3px 70px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 3px 70px 0px rgba(0,0,0,0.75);
+    box-shadow: 4px 3px 70px 0px rgba(0,0,0,0.75);
+}
+
+.strelki {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.vlevo {
+    left: 0;
+    height: 100%;
+    width: 10%;
+    background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 2%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 2%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 2%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    float: left;
+}
+
+.vpravo {
+    right: 0;
+    height: 100%;
+    width: 10%;
+    background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.01) 1%, rgba(255,255,255,1) 98%, rgba(255,255,255,1) 99%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.01) 1%,rgba(255,255,255,1) 98%,rgba(255,255,255,1) 99%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.01) 1%,rgba(255,255,255,1) 98%,rgba(255,255,255,1) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    float: right;
+}
+
+.vlevo:hover {
+    cursor: pointer;
+}
+
+.vpravo:hover {
+    cursor: pointer;
 }
 
 .car1 {
@@ -256,7 +310,7 @@ html, body {
 
 .invite {
     width: 100%;
-    height: 25%;
+    height: 100vh;
 }
 
 .inv {
@@ -281,6 +335,7 @@ html, body {
     padding-top: 3%;
     padding-bottom: 3%;
     font-family: 'Cormorant Infant', serif;
+    border-radius: 10px 10px 10px 10px;
 }
 
 .ido {
@@ -316,12 +371,11 @@ html, body {
     
     #logo1 {
         height: auto;
-        width: 100%;
+        width: 80%;
     }
     
     .content {
         width: 100%;
-        height: 300%;
         padding: 0;
         margin: 0;
     }
@@ -355,7 +409,7 @@ html, body {
     }
 
     .left_bar {
-        width: 50%;
+        width: 70%;
         height: 100%;
         background-color: rgba(255, 255, 255, 0.6);
         float: left;
@@ -371,7 +425,7 @@ html, body {
         height: 10%;
         vertical-align: middle;
         padding-left: 10%;
-        font-size: 300%;
+        font-size: 400%;
         display: none;
         z-index: 9999;
     }
@@ -390,11 +444,10 @@ html, body {
 
     .header {
         width: 100%;
-        height: 33%;
     }
 
     .bg1_gap {
-        height: 20%;
+        height: 5%;
         width: 100%;
     }
 
@@ -441,12 +494,12 @@ html, body {
     }
 
     .welcome {
-        margin-top: 50%;
+        margin-top: 2%;
         margin-left: 10%;
         height: 30%;
-        width: 60%;
+        width: 80%;
         font-family: 'Cormorant Infant', serif;
-        font-size: 400%;
+        font-size: 700%;
         display: none;
 
     }
@@ -466,7 +519,7 @@ html, body {
 
     .count {
         width: 100%;
-        height: 33%;
+        display: none;
     }
 
     .c_cover {
@@ -540,23 +593,74 @@ html, body {
 
     .carousely {
         width: 100%;
-        height: 33%;
+        display: none;
     }
 
-#myCarousel {
-    margin-left: 5%;
-    width: 60%;
-    height: 80%;
-}
+    .gal {
+        width: 100%;
+        height: 100%;
+    }
 
-.car1 {
-    height: 10%;
-    width: 100%;
-}
+    .g_gap {
+        width: 100%;
+        height: 5%;
+    }
+
+    .karts {
+        width 100%;
+        height: 90%;
+        overflow-x: scroll;
+        display: flex;
+    }
+    
+    .kartochka {
+        margin-left: 5%;
+        height: 100%;
+        float: left;
+        display: inline-block;
+        -webkit-box-shadow: 4px 3px 70px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 4px 3px 70px 0px rgba(0,0,0,0.75);
+        box-shadow: 4px 3px 70px 0px rgba(0,0,0,0.75);
+    }
+
+    .strelki {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        display: none;
+    }
+
+    .vlevo {
+        left: 0;
+        height: 100%;
+        width: 10%;
+        background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 2%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 2%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 2%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        float: left;
+    }
+
+    .vpravo {
+        right: 0;
+        height: 100%;
+        width: 10%;
+        background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.01) 1%, rgba(255,255,255,1) 98%, rgba(255,255,255,1) 99%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.01) 1%,rgba(255,255,255,1) 98%,rgba(255,255,255,1) 99%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.01) 1%,rgba(255,255,255,1) 98%,rgba(255,255,255,1) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        float: right;
+    }
+
+    .vlevo:hover {
+        cursor: pointer;
+    }
+
+    .vpravo:hover {
+        cursor: pointer;
+    }
 
     .invite {
         width: 100%;
-        height: 33%;
+        display: none;
     }
 
     .inv {
@@ -604,7 +708,7 @@ html, body {
     
     #d_text {
         font-size: 350%;
-    }
+    }    
 
 .gallery {
     width: 100%;

@@ -12,6 +12,18 @@ function scrollButt(a){
     close();
 }
 
+
+
+function sl(){
+    var x = document.getElementById('karts').scrollLeft;
+    $('#karts').animate({scrollLeft: x - 600}, 300);
+}
+
+function sr(){
+    var x = document.getElementById('karts').scrollLeft;
+    $('#karts').animate({scrollLeft: x + 600}, 300);
+}
+
 var menuToggle = true;
 var links = document.getElementsByClassName("link");
 function menu(){
@@ -60,7 +72,10 @@ async function login(){
         $("#login").fadeOut(500);
         document.getElementById("site").style.overflowY = "scroll";
         $("#main_icon").fadeIn(500);
-        getInf(); 
+        getInf();
+        document.getElementById('2').style.display = 'block';
+        document.getElementById('4').style.display = 'block';
+        document.getElementById('5').style.display = 'block';
     }
 }
 
