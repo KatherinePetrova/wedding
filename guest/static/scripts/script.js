@@ -8,11 +8,11 @@ function lo(){
 }
 
 function doIt(){
-    document.getElementById("1").style.height = window.screen.height*0.9 + "px";
-    document.getElementById("2").style.height = window.screen.height*0.9 + "px";
-    document.getElementById("3").style.height = window.screen.height*0.9 + "px";
-    document.getElementById("4").style.height = window.screen.height*0.9 + "px";
-    document.getElementById("5").style.height = window.screen.height*0.9 + "px";
+    document.getElementById("1").style.height = document.documentElement.clientHeight; + "px";
+    document.getElementById("2").style.height = document.documentElement.clientHeight; + "px";
+    document.getElementById("3").style.height = document.documentElement.clientHeight; + "px";
+    document.getElementById("4").style.height = document.documentElement.clientHeight; + "px";
+    document.getElementById("5").style.height = document.documentElement.clientHeight; + "px";
 }
 
 function logout() {
