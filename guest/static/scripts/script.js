@@ -1,6 +1,18 @@
 function lo(){
     $('body,html').animate({scrollTop: $("#1").offset().top}, 500);
-    document.getElementById("site").style.overflowY = "hidden";
+    console.log(window.screen.height);
+    if(window.screen.width<1000){
+        doIt();
+    }
+    doIt();
+}
+
+function doIt(){
+    document.getElementById("1").style.height = document.documentElement.clientHeight; + "px";
+    document.getElementById("2").style.height = document.documentElement.clientHeight; + "px";
+    document.getElementById("3").style.height = document.documentElement.clientHeight; + "px";
+    document.getElementById("4").style.height = document.documentElement.clientHeight; + "px";
+    document.getElementById("5").style.height = document.documentElement.clientHeight; + "px";
 }
 
 function logout() {
