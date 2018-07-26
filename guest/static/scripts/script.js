@@ -4,10 +4,10 @@ function lo(){
     if(window.screen.width<500){
         doIt();
     }
-    doIt();
 }
 
 function doIt(){
+    console.log("screen changed" + window.screen.width);
     document.getElementById("1").style.height = document.documentElement.clientHeight; + "px";
     document.getElementById("2").style.height = document.documentElement.clientHeight; + "px";
     document.getElementById("3").style.height = document.documentElement.clientHeight; + "px";
