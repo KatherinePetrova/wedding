@@ -1,7 +1,7 @@
 function lo(){
     $('body,html').animate({scrollTop: $("#1").offset().top}, 500);
     console.log(window.screen.height);
-    if(window.screen.width<1000){
+    if(window.screen.width<500){
         doIt();
     }
     doIt();
