@@ -1,249 +1,171 @@
-{% load staticfiles %}
-<html id="site">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Cormorant+Infant:400i" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <style>
-            .bg1 {
-                background-image: url({% static 'pics/bg5.JPG' %});
-                height: 100%; 
-                background-attachment: fixed;
-                background-position: 80% 50%;
-                background-repeat: no-repeat;
-                background-size: cover;
-                filter: blur(0.3px);
-            }
-            
-            .bg2 {
-                background-image: url({% static 'pics/flowers_bg.jpg' %});
-                height: 100%; 
-                background-attachment: fixed;
-                background-position: left center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                filter: blur(0.3px);
-            }
-            
-            .c2 {
-                background-image: url({% static 'pics/bg2.jpg' %});
-                height: 60%; 
-                background-attachment: fixed;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                filter: blur(0.3px);
-            }
-            
-            .bg3 {
-                background-image: url({% static 'pics/bg4.jpg' %});
-                height: 100%; 
-                background-attachment: fixed;
-                background-position: left center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                filter: blur(0.3px);
-            }
-            
-            .bg4 {
-                background-image: url({% static 'pics/bg7.jpg' %});
-                height: 100%; 
-                background-attachment: fixed;
-                background-position: left center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                filter: blur(0.3px);
-            }
-            
-            <
-            
-    @media only screen and (max-width: 1000px) {
-            }
-        </style>
-    </head>
-    <body onload="lo()">
-        <div class="content">
-            <div class="fixed_menu">
-                <div class="fm_gap"></div>
-                <img src="{% static 'pics/menu_icon.png' %}" height="40%" id="main_icon" onclick="menu()">
-                <div class="fm_gap"></div>
-            </div>
-            <div class="fixed_header" id="fh">
-                <div class="left_bar">
-                    <div class="lf_gap1"></div>
-                    <div class="link" onclick="scrollButt('#1')">
-                        Главная
-                    </div>
-                    <div class="link" onclick="scrollButt('#2')">
-                        Agenda
-                    </div>
-                    <div class="link" onclick="scrollButt('#3')">
-                        Қарта
-                    </div>
-                    <div class="link" onclick="scrollButt('#4')">
-                        Галерея
-                    </div>
-                    <div class="link" onclick="scrollButt('#5')">
-                        Приглашение
-                    </div>
-                </div>
-                <div class="right_bar" onclick="close()">
-                </div>
-            </div>
-            <div class="header" id="1">
-                <div class="bg1">
-                    <center><img src="{% static 'pics/logo2.png' %}" height="20%" id="logo1"></center>
-                    <div class="bg1_gap"></div>
-                    <div class="login" id="login">
-                        <div class="l_gap"></div>
-                        <div class="l_main_text">
-                            Авторизация
-                        </div>
-                        <div class="l_fields_right">
-                            Логин:
-                        </div>
-                        <div class="l_fields_left">
-                            <input type="text" id="name">
-                        </div>
-                        <div class="l_fields_right">
-                            Пароль:
-                        </div>
-                        <div class="l_fields_left">
-                            <input type="password" id="password">
-                        </div>
-                        <center><button class="l_button" onclick="login()">Кіру</button></center>
-                    </div>
-                    <div class="welcome" id="welcome">
-                        <div class="w1" id="w1">
-                            Қош келдің
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="count" id="2">
-                <div class="bg2">
-                    <div class="c_cover">
-                        <div class="c_header">
-                            Қыз ұзату
-                        </div>
-                        <div class="timery">
-                                <div class="clock">
-                            <div class="column">
-                                <div class="timer" id="days"></div>
-                                <div class="text">КҮН</div>
-                            </div>
-                            <div class="column">
-                                <div class="timer" id="hours"></div>
-                                <div class="text">САҒАТ</div>
-                            </div>
-                            <div class="column">
-                                <div class="timer" id="minutes"></div>
-                                <div class="text">МИНУТ</div>
-                            </div>
-                            <div class="column">
-                                <div class="timer" id="seconds"></div>
-                                <div class="text">СЕКУНД</div>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="c_footer">
-                            Қыз узату 01,02,2018 Тимирязев Бақшасайрада болады. Талғардың негізінде он өте қиын де.
-                        </div>
-                        <div class="forphone">
-                            <center>
-                            <a class="dg-widget-link" href="http://2gis.kz/almaty/firm/9429940000793155/center/76.90673232078554,43.22348044252933/zoom/17?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть на карте Алматы</a><div class="dg-widget-link"><a href="http://2gis.kz/almaty/firm/9429940000793155/photos/9429940000793155/center/76.90673232078554,43.22348044252933/zoom/17?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=photos">Фотографии компании</a></div><div class="dg-widget-link"><a href="http://2gis.kz/almaty/center/76.905801,43.217297/zoom/17/routeTab/rsType/bus/to/76.905801,43.217297╎Атакент?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route">Найти проезд до Атакент</a></div><script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script><script charset="utf-8">new DGWidgetLoader({"width":640,"height":600,"borderColor":"#a3a3a3","pos":{"lat":43.22348044252933,"lon":76.90673232078554,"zoom":17},"opt":{"city":"almaty"},"org":[{"id":"9429940000793155"}]});</script><noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript> 
-                            </center>
-                        </div>
-                    </div>
-                </div>                        
-            </div>
-            <div class="map" id="3">
-                <div class="bg2">
-                    <div class="c_cover">
-                    <div class="c_gap"></div>
-                    <center>
-                        <a class="dg-widget-link" href="http://2gis.kz/almaty/firm/9429940000793155/center/76.90673232078554,43.22348044252933/zoom/17?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть на карте Алматы</a><div class="dg-widget-link"><a href="http://2gis.kz/almaty/firm/9429940000793155/photos/9429940000793155/center/76.90673232078554,43.22348044252933/zoom/17?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=photos">Фотографии компании</a></div><div class="dg-widget-link"><a href="http://2gis.kz/almaty/center/76.905801,43.217297/zoom/17/routeTab/rsType/bus/to/76.905801,43.217297╎Атакент?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route">Найти проезд до Атакент</a></div><script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script><script charset="utf-8">new DGWidgetLoader({"width":640,"height":600,"borderColor":"#a3a3a3","pos":{"lat":43.22348044252933,"lon":76.90673232078554,"zoom":17},"opt":{"city":"almaty"},"org":[{"id":"9429940000793155"}]});</script><noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript> 
-                    </center>
-                    </div>
-                </div>
-            </div>
-            <div class="carousely" id="4">
-                <div class="bg4">
-                    <div class="c_cover">
-                        <div class="gal">
-                            <div class="strelki">
-                                <div class="vlevo" onclick="sl()">
-                                </div>
-                                <div class="vpravo" onclick="sr()">
-                                </div>
-                            </div>
-                            <div class="g_gap"></div>
-                            <div class="karts" id="karts">
-                                <div class="kartochka">
+<!DOCTYPE html>
+<html lang="en">
 
-                                </div>
-                                <div class="kartochka">
-                                    <img src="{% static 'pics/car1.JPG' %}" height="100%" id="c1">
-                                </div>
-                                <div class="kartochka">
-                                    <img src="{% static 'pics/car2.JPG' %}" height="100%" id="c2">
-                                </div>
-                                <div class="kartochka">
-                                    <img src="{% static 'pics/car3.JPG' %}" height="100%" id="c3">
-                                </div>
-                                <div class="kartochka">
-                                    <img src="{% static 'pics/car4.JPG' %}" height="100%" id="c4">
-                                </div>
-                                <div class="kartochka">
-                                    <img src="{% static 'pics/car5.JPG' %}" height="100%" id="c5">
-                                </div>
-                                <div class="kartochka">
-                                    <img src="{% static 'pics/car6.JPG' %}" height="100%" id="c6">
-                                </div>
-                                <div class="kartochka">
-                                    <img src="{% static 'pics/car7.JPG' %}" height="100%" id="c7">
-                                </div>                            
-                            </div>
-                            <div class="g_gap"></div>
-                        </div>
-                    </div>                
-                </div>
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Азамат+Ақерке</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="static/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="static/css/stylish-portfolio.min.css" rel="stylesheet">
+    <link href="static/css/login.css" rel="stylesheet">
+    <link href="static/css/mystyle.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <a class="menu-toggle rounded" href="#" style="display: none">
+      <i class="fas fa-bars"></i>
+    </a>
+    <nav id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+          <a class="js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#page-top">Home</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#about">About</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#services">Services</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#portfolio">Portfolio</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+      
+      
+    <!-- Login -->  
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="loginmodal-container modal-content">
+                <h1>Аккаунтына кіріңіз</h1><br>
+                <form>
+                    <input type="text" name="user" placeholder="Username">
+					<input type="password" name="pass" placeholder="Password">
+					<input type="submit" name="login" class="login loginmodal-submit" value="Кіру">
+				</form>
             </div>
-            <div class="invite" id="5">
-                <div class="bg3">
-                    <div class="inv">
-                    <div class="i1">
-                    </div>
-                    <div class="i2">
-                        <center>
-                            <h1 id="dear">
-                                Уважаемый Толеген
-                            </h1>
-                        </center>
-                        <br><br>
-                        <center><h3 id="d_text">Cізді приглашаем на қыз ұзату</h3></center>
-                        <br><br><br><br>
-                        <center>
-                            <div class="ido" id="ido" onclick="ido()">Я приду</div>
-                        </center>
-                    </div>
-                    <div class="i1">
-                    </div>
-                </div>
-                </div>    
-            </div>
-            <div class="footer">
-            </div>
-        </div>        
-    </body>
-    <script src="{% static 'scripts/script.js' %}"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.4/moment-timezone-with-data.js"></script>
-    <script src="{% static 'scripts/timer.js' %}"></script>
+        </div>
+      </div>
+
+    <!-- Header -->
+    <header class="masthead d-flex" style="background-attachment: fixed; background-image: url('static/img/bg1.JPG'); background-position: 80% 50%; padding-top: 0.5rem; padding-bottom: 2rem; height: 100vh;">
+      <div class="container p-3 text-center">
+          <h1 class="mb-1"><img class="img-responsive logo_image" src="static/img/logo2.png"></h1>
+          <div class="container mt-4 kiru" style="bottom: 0;">
+            <a class="btn btn-primary btn-xl" href="#" data-toggle="modal" data-target="#login-modal">Кіру</a>
+          </div>
+      </div>
+      <div class="overlay"></div>
+    </header>
+      
+      <!-- Header -->
+    <header class="masthead d-flex" style="background-attachment: fixed; background-image: url('static/img/bg2.jpg')">
+      <div class="container text-center my-auto">
+        <h1 class="mb-1">Stylish Portfolio</h1>
+        <h3 class="mb-5">
+          <em>A Free Bootstrap Theme by Start Bootstrap</em>
+        </h3>
+        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+      </div>
+      <div class="overlay"></div>
+    </header>
+      
+      <!-- Header -->
+    <header class="masthead d-flex" style="background-attachment: fixed; background-image: url('static/img/bg3.jpg')">
+      <div class="container text-center my-auto">
+        <h1 class="mb-1">Stylish Portfolio</h1>
+        <h3 class="mb-5">
+          <em>A Free Bootstrap Theme by Start Bootstrap</em>
+        </h3>
+        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+      </div>
+      <div class="overlay"></div>
+    </header>
+      
+      <!-- Header -->
+    <header class="masthead d-flex" style="background-attachment: fixed; background-image: url('static/img/bg1.JPG')">
+      <div class="container text-center my-auto">
+        <h1 class="mb-1">Stylish Portfolio</h1>
+        <h3 class="mb-5">
+          <em>A Free Bootstrap Theme by Start Bootstrap</em>
+        </h3>
+        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+      </div>
+      <div class="overlay"></div>
+    </header>
+
+
+
+    <!-- Map -->
+    <section id="contact" class="map" style="display: none;">
+      <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
+      <br/>
+      <small>
+        <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
+      </small>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center" style="display: none;">
+      <div class="container">
+        <ul class="list-inline mb-5">
+          <li class="list-inline-item">
+            <a class="social-link rounded-circle text-white mr-3" href="#">
+              <i class="icon-social-facebook"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="social-link rounded-circle text-white mr-3" href="#">
+              <i class="icon-social-twitter"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="social-link rounded-circle text-white" href="#">
+              <i class="icon-social-github"></i>
+            </a>
+          </li>
+        </ul>
+        <p class="text-muted small mb-0">Copyright &copy; Your Website 2018</p>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="static/vendor/jquery/jquery.min.js"></script>
+    <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="static/js/stylish-portfolio.min.js"></script>
+
+  </body>
+
 </html>

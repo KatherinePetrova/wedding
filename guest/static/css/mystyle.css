@@ -1,0 +1,17 @@
+.logo_image {
+    width: 90%;
+}
+
+.kiru {
+    margin-top: 35rem!important;
+}
+
+@media screen and (min-width: 1000px) {
+    .logo_image {
+        width: 50%;
+    }
+    
+    .kiru {
+        margin-top: 10rem!important;
+    }
+}
