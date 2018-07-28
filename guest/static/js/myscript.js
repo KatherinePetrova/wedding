@@ -6,6 +6,7 @@ function screens(){
     $('#invite').css("height", height);
     $('#plan').css("height", height);
     $('#contacts').css("height", height);
+    $('#gal').css("height", height);
 }
 
 window.onload = screens;
