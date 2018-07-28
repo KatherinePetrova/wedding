@@ -25,7 +25,7 @@ SECRET_KEY = 'kj=k6n&15fl-yy8-2#tqqy9t(+fjyw)l272xlsk*0&z3s--#(r'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'MansurNurullayev.pythonanywhere.com', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1', 'MansurNurullayev.pythonanywhere.com', 'localhost', 'www.theaa8.kz']
 
 
 # Application definition
