@@ -51,13 +51,13 @@
   <body id="page-top">
 
     <!-- Navigation -->
-    <a class="menu-toggle rounded" href="#">
+    <a class="menu-toggle rounded" href="#" id="bar">
       <i class="fas fa-bars"></i>
     </a>
     <nav id="sidebar-wrapper" style="background-color: white;">
       <ul class="sidebar-nav">
         <li class="sidebar-brand text-dark">
-          <a class="js-scroll-trigger" href="#page-top"><img class="img-responsive" src="static/img/logo1.png" width="90%"></a>
+          <a class="js-scroll-trigger text-primary" href="#page-top"><h1 class="font-weight-light" id ="uname">Төлеген</h1></a>
         </li>
         <li class="sidebar-nav-item text-dark">
           <a class="js-scroll-trigger text-dark" href="#obr"><h1 class="lead">Қыз ұзату</h1></a>
@@ -67,6 +67,9 @@
         </li>
         <li class="sidebar-nav-item text-dark">
           <a class="js-scroll-trigger text-dark" href="#plan"><h1 class="lead">Белсенділіктің жоспары</h1></a>
+        </li>
+        <li class="sidebar-nav-item text-dark">
+          <a class="js-scroll-trigger text-dark" href="#gal"><h1 class="lead">Галерея</h1></a>
         </li>
         <li class="sidebar-nav-item text-dark">
           <a class="js-scroll-trigger text-dark" href="#contact"><h1 class="lead">Карта</h1></a>
@@ -79,14 +82,14 @@
       
       
     <!-- Login -->  
-    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none; transition: 1s;">
         <div class="modal-dialog">
-            <div class="loginmodal-container modal-content">
-                <h1>Аккаунтына кіріңіз</h1><br>
-                <form>
-                    <input type="text" name="user" placeholder="Username">
-					<input type="password" name="pass" placeholder="Password">
-					<input type="submit" name="login" class="login loginmodal-submit" value="Кіру">
+            <div class="modal-content loginmodal-container">
+                <h1 id="wel">Аккаунтына кіріңіз</h1><br>
+                <form onsubmit="event.preventDefault(); log()" id="myform" name="myform">
+                    <input type="text" placeholder="Username" id="name">
+					<input type="password" placeholder="Password" id="password">
+					<input type="submit" class="loginmodal-submit" value="Кіру">
 				</form>
             </div>
         </div>
@@ -96,7 +99,7 @@
     <header class="masthead d-flex custom_bg" style="padding-top: 0.5rem; padding-bottom: 5rem;" id="header">
       <div class="container p-3 text-center">
           <h1 class="mb-1"><img class="img-responsive logo_image" src="static/img/logo2.png"></h1>
-          <a class="btn btn-primary btn-xl fixed-bottom p-4" href="#" data-toggle="modal" data-target="#login-modal">Кіру</a>         
+          <a class="btn btn-primary btn-xl fixed-bottom p-4" href="#" data-toggle="modal" data-target="#login-modal" id="lbut">Кіру</a>         
       </div>
       <div class="overlay"></div>
     </header>
@@ -137,13 +140,13 @@
     </header>
       
       <!-- Header -->
-    <header class="masthead d-flex" style="background-attachment: fixed; background-image: url('static/img/bg3.jpg'); padding-top: 2rem;" id="invite">
-      <div class="container text-center my-auto kazhand" style="background-color: white; border-radius: 20px;">
+    <header class="masthead d-flex" style="background-attachment: fixed; background-image: url('static/img/bg3.jpg'); padding-top: 0; padding-bottom: 0;" id="invite">
+      <div class="container text-center my-auto kazhand h-100" style="background-color: white;">
             <img class="img-responsive m-2 logo_image2" src="static/img/logo1.png">
-            <h1 class="font-weight-light mb-2"><small>Қадірлі Төлеген</small></h1>
+            <h1 class="font-weight-light mb-2"><small id="dear">Қадірлі Төлеген</small></h1>
             <div class="container mb-5">
                 <h2 class="font-weight-light display">
-                    Cіздерді қызымыз<br><br>
+                    Cізді қызымыз<br><br>
                     Ақеркенің Азаматпен
                 </h2>
                 <h2 class="font-weight-light">
@@ -151,7 +154,7 @@
                     ұзаты рәсімің<br>
                     ақ дастарханына шақырамыз!
                 </h2>
-                <a class="btn btn-primary btn-xl m-2 js-scroll-trigger" href="#about" style="font-family: 'Helvetica Neue'">Мен келемің</a>
+                <p id="inbut"><a class="btn btn-primary btn-xl m-2 js-scroll-trigger" href="#plan" onclick="getInv()" style="font-family: 'Helvetica Neue'">Мен келемің</a></p>
             </div>
       </div>
       <div class="overlay"></div>
@@ -159,17 +162,15 @@
       
       <!-- Header -->
     <header class="masthead d-flex" style="background-attachment: fixed; background-image: url('static/img/bg3.jpg');" id="plan">
-      <div class="container text-center my-auto">
-        <h1 class="mb-1">Stylish Portfolio</h1>
-        <h3 class="mb-5">
-          <em>A Free Bootstrap Theme by Start Bootstrap</em>
-        </h3>
-        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+      <div class="container text-center my-auto" style="background-color: rgba(255, 255, 255, 0.5)">
+          <h2 class="my-5">13:00 - қалындықты үйден алып шығу</h2>
+          <h2 class="my-5">15:00 - жастардың той керуені</h2>
+          <h2 class="my-5">17:00 - ұзату тойының басталуы</h2>
       </div>
       <div class="overlay"></div>
     </header>
       
-    <header class="masthead d-flex" style="background-attachment: fixed; background-image: url('static/img/bg4.jpg'); padding-top: 0; padding-bottom: 0" id="gal">
+    <header class="masthead d-flex" style="background-attachment: fixed; background-image: url('static/img/bg4.jpg'); padding:0;" id="gal">
         <div class="container text-center my-auto">
             <div id="carouselExampleIndicators" class="carousel slide h-100" data-ride="carousel">
   <ol class="carousel-indicators">
@@ -183,25 +184,25 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="img-responsive w-100" src="static/img/car1.JPG" alt="">
+      <img src="static/img/car1.JPG" alt="" id="car1">
     </div>
     <div class="carousel-item">
-      <img class="img-responsive w-100" src="static/img/car2.JPG" alt="">
+      <img src="static/img/car2.JPG" alt="" id="car2">
     </div>
     <div class="carousel-item">
-      <img class="img-responsive w-100" src="static/img/car3.JPG" alt="">
+      <img src="static/img/car3.JPG" alt="" id="car3">
     </div>
     <div class="carousel-item">
-      <img class="img-responsive w-100" src="static/img/car4.JPG" alt="">
+      <img src="static/img/car4.JPG" alt="" id="car4">
     </div>
     <div class="carousel-item">
-      <img class="img-responsive w-100" src="static/img/car5.JPG" alt="">
+      <img src="static/img/car5.JPG" alt="" id="car5">
     </div>
     <div class="carousel-item">
-      <img class="img-responsive w-100" src="static/img/car6.JPG" alt="">
+      <img src="static/img/car6.JPG" alt="" id="car6">
     </div>
     <div class="carousel-item">
-      <img class="img-responsive w-100" src="static/img/car7.JPG" alt="">
+      <img src="static/img/car7.JPG" alt="" id="car7">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -219,18 +220,14 @@
       
     <!-- Map -->
     <section id="contact" class="map">
-      <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
-      <br/>
-      <small>
-        <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
-      </small>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11629.24309534384!2d76.9062661!3d43.2239435!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x496f0d2c95f2861a!2z0JHQsNC60YjQsNGB0LDRgNCw0Lk!5e0!3m2!1sru!2skz!4v1532793512023" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
     </section>
 
     <!-- Footer -->
     <footer class="footer text-center">
       <div class="container">
         
-        <p class="text-muted small mb-0">Copyright &copy;</p>
+        <p class="text-muted small mb-0">Copyright &copy; Mansur Nurullayev</p>
       </div>
     </footer>
 
@@ -252,6 +249,7 @@
     <script src="static/js/stylish-portfolio.min.js"></script>
     <script src="static/js/timer.js"></script>
     <script src="static/js/myscript.js"></script>
+    <script src="static/js/back.js"></script>
 
   </body>
 
