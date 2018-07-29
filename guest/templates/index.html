@@ -38,9 +38,16 @@
             background-attachment: fixed;
         }
         
+        .atach {
+            background-attachment: scroll;
+        }
+        
         @media screen and (min-width: 1000px) {
             .custom_bg {
                 background-image: url("static/img/bg1.JPG");
+            }
+            
+            .atach {
                 background-attachment: fixed;
             }
         }
@@ -97,7 +104,7 @@
       </div>
 
     <!-- Header -->
-    <header class="masthead d-flex custom_bg" style="padding-top: 0.5rem; padding-bottom: 5rem;" id="header">
+    <header class="masthead d-flex custom_bg atach" style="padding-top: 0.5rem; padding-bottom: 5rem;" id="header">
       <div class="container p-3 text-center">
           <h1 class="mb-1"><img class="img-responsive logo_image" src="static/img/logo2.png"></h1>
           <div class="row h-25"></div>
@@ -121,7 +128,7 @@
     </header>
       
       <!-- Header -->
-    <header class="masthead d-none" style="background-attachment: fixed; background-image: url('static/img/bg2.jpg');" id="obr">
+    <header class="masthead d-none atach" style="background-image: url('static/img/bg2.jpg');" id="obr">
       <div class="container text-center">
         <div class="row">
             <div class="col">
@@ -156,7 +163,7 @@
     </header>
       
       <!-- Header -->
-    <header class="masthead d-none" style="background-attachment: fixed; background-image: url('static/img/bg3.jpg'); padding-top: 0; padding-bottom: 0;" id="invite">
+    <header class="masthead d-none atach" style="background-image: url('static/img/bg3.jpg'); padding-top: 0; padding-bottom: 0;" id="invite">
       <div class="container text-center my-auto kazhand h-100" style="background-color: white;">
             <img class="img-responsive m-2 logo_image2" src="static/img/logo1.png">
             <h1 class="font-weight-light mb-3" id="dear">Қадірлі Төлеген</h1>
@@ -177,7 +184,7 @@
     </header>
       
       <!-- Header -->
-    <header class="masthead d-none" style="background-attachment: fixed; background-image: url('static/img/bg3.jpg');" id="plan">
+    <header class="masthead d-none atach" style="background-image: url('static/img/bg3.jpg');" id="plan">
       <div class="container text-center my-auto" style="background-color: rgba(255, 255, 255, 0.5)">
           <h2 class="my-5 font-weight-light">13:00 - қалыңдықты үйден алып шығу</h2>
           <h2 class="my-5 font-weight-light">15:00 - жастардың той керуені</h2>

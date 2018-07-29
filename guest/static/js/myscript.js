@@ -24,11 +24,6 @@ function screens(){
         $('#car7').css("width", width);
     }
     
-    $("#obr").css("display", "none!important");
-    $("#invite").hide();
-    $("#plan").hide();
-    $("#gal").hide();
-    $("#contacts").hide();
 }
 
 window.onload = screens;
