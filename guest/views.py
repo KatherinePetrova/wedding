@@ -9,6 +9,9 @@ from rest_framework.decorators import api_view
 def index(request):
     return render(request, 'index.html', {})
 
+def table(request):
+    return render(request, 'table.html', {})
+
 @api_view(['GET'])
 def guestInf(request):
     user = request.user

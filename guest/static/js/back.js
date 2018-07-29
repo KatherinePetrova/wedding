@@ -49,12 +49,14 @@ async function getInf(){
             } else {
                 let text = await response.text();
                 let data = JSON.parse(text);
-                console.log("data", data);
                 $('#lbut').fadeOut(500);
                 $('#myform').fadeOut(500);
                 document.getElementById("wel").innerHTML = "Қош келдіңіз " + data[0].first_name;
                 document.getElementById("uname").innerHTML = data[0].first_name;
-                document.getElementById("dear").innerHTML = "Қадірлі " + data[0].first_name
+                document.getElementById("dear").innerHTML = "Қадірлі " + data[0].first_name;
+                if(data[0].invite){
+                    document.getElementById("inbut").innerHTML = "Мен келемің!";
+                }
              
             }
 }
