@@ -23,6 +23,7 @@ async function log(){
         console.log("Login ok!");
         localStorage.setItem("token", data.token);
         getInf();
+        document.getElementById("poem").setAttribute("class", "col");
         document.getElementById("bar").setAttribute("class", "menu-toggle rounded");
         document.getElementById("obr").setAttribute("class", "masthead d-flex");
         document.getElementById("invite").setAttribute("class", "msthead d-flex");
@@ -73,4 +74,20 @@ async function getInv(){
             document.getElementById("inbut").innerHTML = "Мен келемің!";
             console.log("accepted");
         }
+}
+
+function logout(){
+    localStorage.setItem("token", "no data");
+    document.getElementById("poem").setAttribute("class", "d-none");
+    document.getElementById("bar").setAttribute("class", "d-none");
+    document.getElementById("obr").setAttribute("class", "d-none");
+    document.getElementById("invite").setAttribute("class", "d-none");
+    document.getElementById("plan").setAttribute("class", "d-none");
+    document.getElementById("gal").setAttribute("class", "d-none");
+    document.getElementById("contact").setAttribute("class", "d-none");
+    document.getElementById("footer").setAttribute("class", "d-none");
+    $('#lbut').fadeIn(500);
+    $('#myform').fadeIn(500);
+    document.getElementById("wel").innerHTML = "Аккаунтына кіріңіз";
+    
 }
