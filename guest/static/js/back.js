@@ -49,13 +49,23 @@ async function getInf(){
             } else {
                 let text = await response.text();
                 let data = JSON.parse(text);
+                if(data[0].username=='admin'){
+                    $('#spisok').fadeIn(500);
+                }
                 $('#lbut').fadeOut(500);
                 $('#myform').fadeOut(500);
                 document.getElementById("wel").innerHTML = "Қош келдіңіз " + data[0].first_name;
                 document.getElementById("uname").innerHTML = data[0].first_name;
                 document.getElementById("dear").innerHTML = "Қадірлі " + data[0].first_name;
+                if(data[0].gender){
+                    document.getElementById("invbut").innerHTML = "Біз келеміз";
+                }
                 if(data[0].invite){
-                    document.getElementById("inbut").innerHTML = "Мен келемің!";
+                    if(data[0].gender){
+                        document.getElementById("inbut").innerHTML = "Біз келеміз!";
+                    } else {
+                        document.getElementById("inbut").innerHTML = "Мен келемің!";   
+                    }
                 }
              
             }
@@ -73,7 +83,13 @@ async function getInv(){
         if (response.status !== 200) {
             alert("Авторизацияны қайтадан жасаңыз");
         } else {
-            document.getElementById("inbut").innerHTML = "Мен келемің!";
+            let text = await response.text();
+            let data = JSON.parse(text);
+            if(data[0].gender){
+                document.getElementById("inbut").innerHTML = "Біз келеміз!";
+            } else {
+                document.getElementById("inbut").innerHTML = "Мен келемің!";   
+            }
             console.log("accepted");
         }
 }
@@ -88,6 +104,7 @@ function logout(){
     document.getElementById("gal").setAttribute("class", "d-none");
     document.getElementById("contact").setAttribute("class", "d-none");
     document.getElementById("footer").setAttribute("class", "d-none");
+    $('#spisok').fadeOut(500);
     $('#lbut').fadeIn(500);
     $('#myform').fadeIn(500);
     document.getElementById("wel").innerHTML = "Аккаунтына кіріңіз";

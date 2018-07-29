@@ -8,6 +8,9 @@ class Guest(models.Model):
     invite = models.BooleanField(default=False)
     gender = models.BooleanField(default=False)
     
+    def username(self):
+        return self.user.username
+    
     def first_name(self):
         return self.user.first_name
     

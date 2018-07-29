@@ -10,4 +10,4 @@ class BeerSerializer(serializers.ModelSerializer):
 class GuestSerializer(serializers.ModelSerializer):
      class Meta:
         model = Guest
-        fields = ('id', 'first_name', 'last_name', 'email', 'invite', 'gender')
+        fields = ('id', 'username', 'first_name', 'last_name', 'email', 'invite', 'gender')

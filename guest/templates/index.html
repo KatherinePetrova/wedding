@@ -86,6 +86,7 @@
         <div class="modal-dialog">
             <div class="modal-content loginmodal-container">
                 <h1 id="wel">Аккаунтына кіріңіз</h1><br>
+                <a class="btn btn-primary btn-xl m-2 js-scroll-trigger" href="/table" style="display: none" id="spisok">Список гостей</a>
                 <form onsubmit="event.preventDefault(); log()" id="myform" name="myform">
                     <input type="text" placeholder="Username" id="name">
 					<input type="password" placeholder="Password" id="password">
@@ -169,7 +170,7 @@
                     ұзаты рәсімің<br>
                     ақ дастарханына шақырамыз!
                 </h2>
-                <p id="inbut" class="display-4"><a class="btn btn-primary btn-xl m-2 js-scroll-trigger" href="#plan" onclick="getInv()" style="font-family: 'Helvetica Neue'">Мен келемің</a></p>
+                <p id="inbut" class="display-4"><a class="btn btn-primary btn-xl m-2 js-scroll-trigger" href="#plan" onclick="getInv()" style="font-family: 'Helvetica Neue'" id="invbut">Мен келемің</a></p>
             </div>
       </div>
       <div class="overlay"></div>
