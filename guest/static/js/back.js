@@ -23,6 +23,13 @@ async function log(){
         console.log("Login ok!");
         localStorage.setItem("token", data.token);
         getInf();
+        document.getElementById("bar").setAttribute("class", "menu-toggle rounded");
+        document.getElementById("obr").setAttribute("class", "masthead d-flex");
+        document.getElementById("invite").setAttribute("class", "msthead d-flex");
+        document.getElementById("plan").setAttribute("class", "msthead d-flex");
+        document.getElementById("gal").setAttribute("class", "msthead d-flex");
+        document.getElementById("contact").setAttribute("class", "map d-flex");
+        document.getElementById("footer").setAttribute("class", "footer text-center d-flex");
     }
 }
 

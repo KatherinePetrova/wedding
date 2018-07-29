@@ -51,7 +51,7 @@
   <body id="page-top">
 
     <!-- Navigation -->
-    <a class="menu-toggle rounded" href="#" id="bar">
+    <a class="menu-toggle rounded d-none" href="#" id="bar">
       <i class="fas fa-bars"></i>
     </a>
     <nav id="sidebar-wrapper" style="background-color: white;">
@@ -60,7 +60,7 @@
           <a class="js-scroll-trigger text-primary" href="#page-top"><h1 class="font-weight-light" id ="uname">Төлеген</h1></a>
         </li>
         <li class="sidebar-nav-item text-dark">
-          <a class="js-scroll-trigger text-dark" href="#obr"><h1 class="lead">Қыз ұзату</h1></a>
+          <a class="js-scroll-trigger text-dark" href="#obr"><h1 class="lead">Ұзату тойы</h1></a>
         </li>
         <li class="sidebar-nav-item text-dark">
           <a class="js-scroll-trigger text-dark" href="#invite"><h1 class="lead">Шақыру</h1></a>
@@ -105,11 +105,11 @@
     </header>
       
       <!-- Header -->
-    <header class="masthead d-flex" style="background-attachment: fixed; background-image: url('static/img/bg2.jpg');" id="obr">
+    <header class="masthead d-none" style="background-attachment: fixed; background-image: url('static/img/bg2.jpg');" id="obr">
       <div class="container text-center">
         <div class="row">
             <div class="col">
-                <h1>Қыз ұзату</h1>
+                <h1 class="font-weight-light">Ұзату тойы</h1>
             </div>
         </div>
         <div class="row myfontsize1">
@@ -132,7 +132,7 @@
         </div>
         <div class="row">
             <div class="col">
-                <h3>кейін басталады</h3>
+                <h3 class="font-weight-light">кейін басталады</h3>
             </div>
         </div>
       </div>
@@ -140,7 +140,7 @@
     </header>
       
       <!-- Header -->
-    <header class="masthead d-flex" style="background-attachment: fixed; background-image: url('static/img/bg3.jpg'); padding-top: 0; padding-bottom: 0;" id="invite">
+    <header class="masthead d-none" style="background-attachment: fixed; background-image: url('static/img/bg3.jpg'); padding-top: 0; padding-bottom: 0;" id="invite">
       <div class="container text-center my-auto kazhand h-100" style="background-color: white;">
             <img class="img-responsive m-2 logo_image2" src="static/img/logo1.png">
             <h1 class="font-weight-light mb-2"><small id="dear">Қадірлі Төлеген</small></h1>
@@ -161,16 +161,16 @@
     </header>
       
       <!-- Header -->
-    <header class="masthead d-flex" style="background-attachment: fixed; background-image: url('static/img/bg3.jpg');" id="plan">
+    <header class="masthead d-none" style="background-attachment: fixed; background-image: url('static/img/bg3.jpg');" id="plan">
       <div class="container text-center my-auto" style="background-color: rgba(255, 255, 255, 0.5)">
-          <h2 class="my-5">13:00 - қалындықты үйден алып шығу</h2>
-          <h2 class="my-5">15:00 - жастардың той керуені</h2>
-          <h2 class="my-5">17:00 - ұзату тойының басталуы</h2>
+          <h2 class="my-5 font-weight-light">13:00 - қалыңдықты үйден алып шығу</h2>
+          <h2 class="my-5 font-weight-light">15:00 - жастардың той керуені</h2>
+          <h2 class="my-5 font-weight-light">17:00 - ұзату тойының басталуы</h2>
       </div>
       <div class="overlay"></div>
     </header>
       
-    <header class="masthead d-flex" style="background-attachment: fixed; background-image: url('static/img/bg4.jpg'); padding:0;" id="gal">
+    <header class="masthead d-none" style="background-attachment: fixed; background-image: url('static/img/bg4.jpg'); padding:0;" id="gal">
         <div class="container text-center my-auto">
             <div id="carouselExampleIndicators" class="carousel slide h-100" data-ride="carousel">
   <ol class="carousel-indicators">
@@ -219,12 +219,12 @@
     </header>
       
     <!-- Map -->
-    <section id="contact" class="map">
+    <section id="contact" class="map d-none">
       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11629.24309534384!2d76.9062661!3d43.2239435!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x496f0d2c95f2861a!2z0JHQsNC60YjQsNGB0LDRgNCw0Lk!5e0!3m2!1sru!2skz!4v1532793512023" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
     </section>
 
     <!-- Footer -->
-    <footer class="footer text-center">
+    <footer class="footer text-center d-none" id="footer">
       <div class="container">
         
         <p class="text-muted small mb-0">Copyright &copy; Mansur Nurullayev</p>
