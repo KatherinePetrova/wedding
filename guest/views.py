@@ -20,8 +20,9 @@ def guestInf(request):
 def getInvite(request):
     user = request.user
     guest = Guest.objects.filter(user=user)
-    guest.invite = True
-    guest.save()
+    for obj in guest:
+        obj.invite = True
+        obj.save()
     seri = GuestSerializer(guest, many=True)
     return Response(seri.data)
 

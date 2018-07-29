@@ -54,7 +54,7 @@ async function getInf(){
                 $('#myform').fadeOut(500);
                 document.getElementById("wel").innerHTML = "Қош келдіңіз " + data[0].first_name;
                 document.getElementById("uname").innerHTML = data[0].first_name;
-                document.getElementById("dear").innerHTML = "Қадірлі " + data[0].first_name;
+                document.getElementById("dear").innerHTML = "Қадірлі " + data[0].first_name
              
             }
 }
