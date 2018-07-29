@@ -26,9 +26,9 @@ async function log(){
         document.getElementById("poem").setAttribute("class", "col");
         document.getElementById("bar").setAttribute("class", "menu-toggle rounded");
         document.getElementById("obr").setAttribute("class", "masthead d-flex atach");
-        document.getElementById("invite").setAttribute("class", "msthead d-flex atach");
-        document.getElementById("plan").setAttribute("class", "msthead d-flex atach");
-        document.getElementById("gal").setAttribute("class", "msthead d-flex atach");
+        document.getElementById("invite").setAttribute("class", "masthead d-flex atach");
+        document.getElementById("plan").setAttribute("class", "masthead d-flex atach");
+        document.getElementById("gal").setAttribute("class", "masthead d-flex atach");
         document.getElementById("contact").setAttribute("class", "map d-flex");
         document.getElementById("footer").setAttribute("class", "footer text-center d-flex");
     }
