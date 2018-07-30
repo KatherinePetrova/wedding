@@ -107,7 +107,15 @@
     <header class="masthead d-flex custom_bg atach" style="padding-top: 0.5rem; padding-bottom: 5rem;" id="header">
       <div class="container p-3 text-center">
           <h1 class="mb-1"><img class="img-responsive logo_image" src="static/img/logo2.png"></h1>
-          <div class="row h-25"></div>
+          <div class="row">
+            <div class="col my-2 d-none" id="hashas">
+                <h1 class="font-weight-light" >
+                    #theAA8
+                </h1>
+            </div>
+            <div class="col w-25 d-none d-md-block d-lg-block d-xl-block">
+            </div>
+          </div>
           <div class="row">
             <div class="col d-none" id="poem">
                 <div clas="container py-5 text-center" style="background-color: rgba(255, 255, 255, 0.5)">
@@ -115,6 +123,7 @@
                         Жер менен көк жалғасып, Айға-Ғалам,<br>
                         Махаббатпен қанатын жайған Адам.<br>
                         Сыңарыңмен самғап ұш!<br>
+                        Аққу-Құсым!<br>
                         Айдыныңды ұмытпа аймалған.
                     </h3>
                 </div>
@@ -201,9 +210,9 @@
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="4" class="d-none d-md-block d-lg-block d-xl-block"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="5" class="d-none d-md-block d-lg-block d-xl-block"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="6" class="d-none d-md-block d-lg-block d-xl-block"></li>
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -219,13 +228,13 @@
       <img src="static/img/car4.JPG" alt="" id="car4">
     </div>
     <div class="carousel-item">
-      <img src="static/img/car5.JPG" alt="" id="car5">
+      <center><img src="static/img/car5.JPG" alt="" id="car5" class="d-none d-md-block d-lg-block d-xl-block"></center>
     </div>
     <div class="carousel-item">
-      <img src="static/img/car6.JPG" alt="" id="car6">
+      <center><img src="static/img/car6.JPG" alt="" id="car6" class="d-none d-md-block d-lg-block d-xl-block"></center>
     </div>
     <div class="carousel-item">
-      <img src="static/img/car7.JPG" alt="" id="car7">
+      <center><img src="static/img/car7.JPG" alt="" id="car7" class="d-none d-md-block d-lg-block d-xl-block"></center>
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

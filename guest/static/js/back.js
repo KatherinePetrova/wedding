@@ -24,6 +24,7 @@ async function log(){
         localStorage.setItem("token", data.token);
         getInf();
         document.getElementById("poem").setAttribute("class", "col");
+        document.getElementById("hashas").setAttribute("class", "col my-2");
         document.getElementById("bar").setAttribute("class", "menu-toggle rounded");
         document.getElementById("obr").setAttribute("class", "masthead d-flex atach");
         document.getElementById("invite").setAttribute("class", "masthead d-flex atach");
