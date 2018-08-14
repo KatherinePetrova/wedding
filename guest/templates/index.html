@@ -67,7 +67,7 @@
           <a class="js-scroll-trigger text-primary" href="#page-top"><h1 class="font-weight-light" id ="uname">Төлеген</h1></a>
         </li>
         <li class="sidebar-nav-item text-dark">
-          <a class="js-scroll-trigger text-dark" href="#obr"><h1 class="lead">Ұзату тойы</h1></a>
+          <a class="js-scroll-trigger text-dark" href="#obr"><h1 class="lead">Үйлену тойы</h1></a>
         </li>
         <li class="sidebar-nav-item text-dark">
           <a class="js-scroll-trigger text-dark" href="#invite"><h1 class="lead">Шақыру</h1></a>
@@ -97,14 +97,14 @@
                 <form onsubmit="event.preventDefault(); log()" id="myform" name="myform">
                     <input type="text" placeholder="Username" id="name">
 					<input type="password" placeholder="Password" id="password">
-					<input type="submit" class="loginmodal-submit" value="Кіру">
+					<input type="submit" class="loginmodal-submit bg-dark" value="Кіру">
 				</form>
             </div>
         </div>
       </div>
 
     <!-- Header -->
-    <header class="masthead d-flex custom_bg atach" style="padding-top: 0.5rem; padding-bottom: 5rem;" id="header">
+    <header class="masthead d-flex custom_bg atach" style="padding-top: 0.5rem; padding-bottom: 5rem; background-position: bottom;" id="header">
       <div class="container p-3 text-center">
           <h1 class="mb-1"><img class="img-responsive logo_image" src="static/img/logo2.png"></h1>
           <div class="row">
@@ -119,19 +119,16 @@
           <div class="row">
             <div class="col d-none" id="poem">
                 <div clas="container py-5 text-center" style="background-color: rgba(255, 255, 255, 0.5)">
-                    <h3 class="font-weight-light">
-                        Жер менен көк жалғасып, Айға-Ғалам,<br>
-                        Махаббатпен қанатын жайған Адам.<br>
-                        Сыңарыңмен самғап ұш!<br>
-                        Аққу-Құсым!<br>
-                        Айдыныңды ұмытпа аймалған.
+                    <h3 class="font-weight-light py-4">
+                        Махаббат деген - шын сезім,<br>
+                        жүрекке әмір жүргізген<br>
                     </h3>
                 </div>
             </div>
             <div class="col w-25 d-none d-md-block d-lg-block d-xl-block">
             </div>
           </div>
-          <a class="btn btn-primary btn-xl fixed-bottom p-4" href="#" data-toggle="modal" data-target="#login-modal" id="lbut">Кіру</a>         
+          <a class="btn btn-dark btn-xl fixed-bottom p-4" href="#" data-toggle="modal" data-target="#login-modal" id="lbut">Кіру</a>         
       </div>
       <div class="overlay"></div>
     </header>
@@ -141,7 +138,7 @@
       <div class="container text-center">
         <div class="row">
             <div class="col">
-                <h1 class="font-weight-light">Ұзату тойы</h1>
+                <h1 class="font-weight-light text-light">Үйлену тойы</h1>
             </div>
         </div>
         <div class="row myfontsize1">
@@ -164,7 +161,7 @@
         </div>
         <div class="row">
             <div class="col">
-                <h3 class="font-weight-light">кейін басталады</h3>
+                <h3 class="font-weight-light text-light">кейін басталады</h3>
             </div>
         </div>
       </div>
@@ -178,15 +175,17 @@
             <h1 class="font-weight-light mb-3" id="dear">Қадірлі Төлеген</h1>
             <div class="container mb-5">
                 <h2 class="font-weight-light display">
-                    Cізді қызымыз<br><br>
-                    Ақеркенің Азаматпен
+                    Cізді немерлеріміз
                 </h2>
+                <div class="display-4">
+                    Азамат & Ақерке
+                </div>
                 <h2 class="font-weight-light">
-                    отау құру салтанатына арналған<br>
-                    ұзаты рәсімің<br>
-                    ақ дастарханына шақырамыз!
+                    үйлену тойына арналған<br>
+                    ақ дастарханның сыйлы қонағы<br>
+                    болуға шақырамыз!
                 </h2>
-                <p id="inbut" class="display-4"><a class="btn btn-primary btn-xl m-2 js-scroll-trigger" href="#plan" onclick="getInv()" style="font-family: 'Helvetica Neue'" id="invbut">Мен келемің</a></p>
+                <p id="inbut" class="display-4"><a class="btn btn-dark btn-xl m-2 js-scroll-trigger" href="#plan" onclick="getInv()" style="font-family: 'Helvetica Neue'" id="invbut">Мен келемің</a></p>
             </div>
       </div>
       <div class="overlay"></div>
@@ -195,9 +194,11 @@
       <!-- Header -->
     <header class="masthead d-none atach" style="background-image: url('static/img/bg3.jpg');" id="plan">
       <div class="container text-center my-auto" style="background-color: rgba(255, 255, 255, 0.5)">
-          <h2 class="my-5 font-weight-light">13:00 - қалыңдықты үйден алып шығу</h2>
-          <h2 class="my-5 font-weight-light">15:00 - жастардың той керуені</h2>
-          <h2 class="my-5 font-weight-light">17:00 - ұзату тойының басталуы</h2>
+          <h2 class="my-5 font-weight-light">
+              Той 2018 жылғы<br>
+              17 тамыз күні,<br>
+              сағат 17:00-де басталады<br>
+          </h2>
       </div>
       <div class="overlay"></div>
     </header>
@@ -249,10 +250,17 @@
         </div>
       <div class="overlay"></div>
     </header>
+    <header class="atach" style="background-image: url('static/img/bg3.jpg'); padding-top: 0;" id="fr_slide">
+        <div class="container m-auto text-center">
+            <button class="btn btn-success my-3" type="button" data-toggle="collapse" data-target="#all_photo">Барлық фото</button>
+            <iframe class="collapse mb-5" id="all_photo" width="100%" height="400em" style="background-color: rgba(255, 255, 255, 0.5); border-style: hidden; display: none!" src="https://drive.google.com/embeddedfolderview?id=1p4ZyrLEbZlOWeSjkCw3t9U7vCs1vvrMQ#grid"></iframe>
+        </div>
+        <div class="overlay"></div>         
+    </header>
       
     <!-- Map -->
     <section id="contact" class="map d-none">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11629.24309534384!2d76.9062661!3d43.2239435!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x496f0d2c95f2861a!2z0JHQsNC60YjQsNGB0LDRgNCw0Lk!5e0!3m2!1sru!2skz!4v1532793512023" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2504.33301426572!2d71.47009502060669!3d51.12076516126511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424583f17be1fa2b%3A0xeb86838d48f76c55!2z0JTQstC-0YDQtdGGINC90LXQt9Cw0LLQuNGB0LjQvNC-0YHRgtC4!5e0!3m2!1sru!2skz!4v1534267902502" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
     </section>
 
     <!-- Footer -->

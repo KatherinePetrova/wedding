@@ -1,7 +1,7 @@
 $(function(){
     function timer(settings){
         var config = {
-            endDate: '2018-08-08 17:00',
+            endDate: '2018-08-17 17:00',
             timeZone: 'Aisa/Almaty',
             hours: $('#hours'),
             minutes: $('#minutes'),
